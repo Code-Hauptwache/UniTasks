@@ -4,7 +4,7 @@ int main()
 {
     float a, b;
 
-    printf("    Your mini Calculators\n");
+    printf("    The mini Calculator\n");
     printf("Enter your first intiger: ");
     scanf("%f", &a);
     printf("Enter your second intiger: ");
