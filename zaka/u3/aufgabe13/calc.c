@@ -2,8 +2,7 @@
 
 int main()
 {
-    float a;
-    float b;
+    float a, b;
 
     printf("    Your mini Calculators\n");
     printf("Enter your first intiger: ");
