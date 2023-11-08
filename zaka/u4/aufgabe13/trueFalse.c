@@ -6,13 +6,16 @@ int main() {
     printf("x\ty\tNOT x\tNOT y\tx AND y\tx OR y\tx XOR y\tNOT (x AND y)\n");
     for (int i = 0; i < 7; i++)
     {
-        if (count < 2)
+        if (count < 1)
         {
             for (int j = 0; j < count; j++)
             {
                 printf("-");
             }
         }
+
+        if (count == 0) printf("-");
+
         printf("-------+");
         count++;
     }
