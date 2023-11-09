@@ -17,6 +17,6 @@ int main()
 }
 
 //c)
-//  Ohen Initialisierung des Zufallsgenerators wird nur 1 ausgegeben
-//  Mit Initialisierung des Zufallsgenerators mit einem festen Wert (z.B. 42, also srand(42)) wir nur 0 ausgegeben
-//  Mit Initialisierung des Zufallsgenerators mittels der aktuellen Systemzeit wird zufällig 0 oder 1 ausgegebe
+//  Ohen Initialisierung des Zufallsgenerators wird ausschließlich 1 ausgegeben
+//  Mit Initialisierung des Zufallsgenerators mit einem festen Wert (z.B. 42) wir ausschließlich 0 ausgegeben
+//  Mit Initialisierung des Zufallsgenerators mittels der aktuellen Systemzeit wird zufällig 0 oder 1 ausgegeben
