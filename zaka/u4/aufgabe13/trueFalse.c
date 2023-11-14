@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int x, y, count;
 
     printf("x\ty\tNOT x\tNOT y\tx AND y\tx OR y\tx XOR y\tNOT (x AND y)\n");
