@@ -4,7 +4,7 @@ int main() {
     int a, b, c, d;
     float q, p, r;
 
-    printf("Bitte geben Sie vier Ganzzahlen ein:\n");
+    printf("Please enter four integers:\n");
     printf("a: ");
     scanf("%d", &a);
     printf("b: ");
@@ -14,7 +14,7 @@ int main() {
     printf("d: ");
     scanf("%d", &d);
 
-    printf("Geben Sie jetzt drei Gleitkommazahlen ein:\n");
+    printf("Please enter three floating-point numbers now:\n");
     printf("q: ");
     scanf("%f", &q);
     printf("p: ");
