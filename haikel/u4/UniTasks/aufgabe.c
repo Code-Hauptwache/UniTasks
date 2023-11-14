@@ -29,39 +29,28 @@ int main ()
    scanf("%i", &p);
    scanf("%i", &q);
    scanf("%i", &r);
-   printf("%i || !%i < %i = %i\n", p , q , r, p || !q < r);
+   printf("(%i || (!%i < %i)) = %i\n", p , q , r, (p || (!q < r)));
 
    printf("Wähle deine drei Zahlen?\n");
    scanf("%i", &p);
    scanf("%i", &q);
    scanf("%i", &r);
-   printf("%i && %i || !%i = %i\n", p , q, r, p && q || r);
+   printf("(%i && (%i || !%i))= %i\n", p , q, r, (p && (q || !r)));
 
    printf("Wähle deine drei Zahlen?\n");
    scanf("%i", &p);
    scanf("%i", &q);
    scanf("%i", &r);
-   printf("%i || !%i && %i = %i\n", p,q,r, p || !q && r);
+   printf("(%i || (!%i && %i)) = %i\n", p,q,r, (p || (!q && r)));
 
-      int x = 1;
-      int y = x++;
-      int g = y;
-
-      int z =2;
-      int n = ++z;
-
-      printf("Postfix %i\n", y);
-      printf("Postfix %i\n", g);
-      printf("Präfix %i\n", n);
+      int n= 6;
 
 
 
-
-
-
-
-
-
+      printf("Erhöht um eins (Präfix) = %d\n",++n);
+      printf("Vermindert um eins (Präfix) = %d\n", --n);
+      printf("Erhöhter Postfix = %d\n", n++);
+      printf("Verminderter Postfix = %d\n", n--);
 
 
 
