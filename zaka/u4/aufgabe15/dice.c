@@ -15,7 +15,7 @@ int main()
         srand(time(NULL));
         diceCPU = rand() % 6 + 1;
 
-        printf("      %i", diceCPU);
+        printf("%i", diceCPU);
 
         fflush(stdout);
     }
