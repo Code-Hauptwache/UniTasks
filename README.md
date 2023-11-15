@@ -22,6 +22,13 @@ Configure Git with your GitHub username and email address:
 git config --global user.name "Your GitHub Username"
 git config --global user.email "your.email@example.com"
 ```
+#### Credential Storage (Temporary Solution)
+If you need to quickly avoid re-entering your credentials and understand the security implications, you can use the following command to store your credentials:
+
+```bash
+git config --global credential.helper store
+```
+Please note: This stores your credentials unencrypted on disk and is considered a security risk. It's intended as a temporary solution. Use more secure methods like SSH keys for long-term projects.
 
 ### Step 3: Clone the repository
 
