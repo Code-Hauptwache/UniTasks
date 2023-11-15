@@ -4,19 +4,28 @@
 
 int main()
 {
-    int diceCPU;
+    int diceCPU; // Variable to store the dice roll
 
-    printf("Dice Generator\n");
+    // Print the title of the dice generator
+    printf("Dice Generator");
 
-    while (1)
+    while (1) // Infinite loop to keep the program running
     {
-        printf("\r");
+        printf("\r"); // Carriage return to overwrite the last dice roll
 
+        // Seed the random number generator with the current time
         srand(time(NULL));
+
+        // Generate a random number between 1 and 6 and store it in diceCPU
         diceCPU = rand() % 6 + 1;
 
-        printf("%i", diceCPU);
+        // Print the dice roll with some space padding
+        printf("      %i", diceCPU);
 
+        // Flush the output buffer to ensure the roll is printed immediately
         fflush(stdout);
     }
+
+    // Unreachable code, as the loop is infinite
+    return 0;
 }
