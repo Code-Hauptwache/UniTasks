@@ -2,8 +2,7 @@
 
 int main ()
 {
-    float ergebnis = 3;
-    ergebnis = 12/8/2;
+    double ergebnis = 12.0/8/2;
     float ergebnis1 = 5/50*10;
     float ergebnis2 = 3/6/9;
 
