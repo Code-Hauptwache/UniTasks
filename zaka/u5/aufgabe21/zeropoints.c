@@ -1,35 +1,86 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    int a;
-    int b;
-    int c;
+    double a;
+    double b;
+    double c;
+    double discriminant;
+    double x1;
+    double x2;
 
-    printf("\033[1mZeropoint calculator of a quadratic function ax^2+bx+c = 0\033[0m\n");
+    // Print program title with bold formatting
+    printf("\n\033[1mZeropoint calculator of a quadratic function ax^2+bx+c = 0\033[0m\n");
+    // Ask for coefficient 'a'
     printf("Pleas enter a number for a: ");
-    scanf("%d", &a);
+    scanf("%lf", &a);
+    // Ask for coefficient 'b'
     printf("Pleas enter a number for b: ");
-    scanf("%d", &b);
+    scanf("%lf", &b);
+    // Ask for coefficient 'c'
     printf("Pleas enter a number for c: ");
-    scanf("%d", &c);
+    scanf("%lf", &c);
+
+    discriminant = (b/2)*(b/2) - c;
     
-    if(a == 0 && b == 0 && c != 0)
+    // Handle case where all coefficients are 0
+    if(a == 0 && b == 0 && c != 0 || discriminant < 0)
     {
-        printf("%ix^2+%ix+%i = 0 has no solution\n", a, b, c);
+        // No solution
+        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mno solution\033[0m\n", a, b, c);
+        printf("\n");
+
         return 0;    
     }
-    else if (a )
+    else if (a == 0 && b == 0 && c == 0)
+    {  
+        // Infinite number of solutions
+        printf("%.0fx^2+%.0fx+%.0f = 0 has an \033[1minfinite number of solutions\033[0m\n", a, b, c);
+        printf("\n");
+
+        return 0;
+    }
+    else if (a == 0 && b != 0)
     {
+        // Single solution for a linear equation
+        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mone solution x = %f\033[0m\n", a, b, c, (double)-c/b);
+        printf("\n");
 
-    }   
+        return 0;
+    }
+    else if (discriminant == 0)
+    {
+        // One real solution
+        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mone solution\033[0m ", a, b, c);
 
-    // x = (-b +- sqrt(b^2 - 4ac)) / (2a))
+        x1 = (double)-b/2 + sqrt(discriminant);
+        x2 = (double)-b/2 - sqrt(discriminant);
 
-    double x1 = (-b + sqrt(b*b - 4*a*c)) / (2*a);
-    double x2 = (-b - sqrt(b*b - 4*a*c)) / (2*a);
+        if (x1!= 0)
+        {
+            printf("\033[1mx = %f\033[0m\n", x1);
+            printf("\n");
+        }
+        else
+        {
+            printf("\033[1mx = %f\033[0m\n", x2);
+            printf("\n");
+        }
 
-    printf("The zeropoints are: x1 = %f, x2 = %f\n", x1, x2);
+        return 0;
+    }
+    else if (discriminant > 0)
+    {
+        // Two real solutions
+        x1 = (double)-b/2 + sqrt(discriminant);
+        x2 = (double)-b/2 - sqrt(discriminant);
+
+        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mtwo solutions x1 = %f x2 = %f\033[0m\n", a, b, c, x1, x2);
+        printf("\n");
+
+        return 0;
+    }
 
     return 0;
 }
