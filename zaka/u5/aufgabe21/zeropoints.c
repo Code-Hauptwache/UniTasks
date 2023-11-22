@@ -22,18 +22,10 @@ int main()
     printf("Pleas enter a number for c: ");
     scanf("%lf", &c);
 
-    discriminant = (b/2)*(b/2) - c;
+    discriminant = b*b - 4*a*c;
     
     // Handle case where all coefficients are 0
-    if(a == 0 && b == 0 && c != 0 || discriminant < 0)
-    {
-        // No solution
-        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mno solution\033[0m\n", a, b, c);
-        printf("\n");
-
-        return 0;    
-    }
-    else if (a == 0 && b == 0 && c == 0)
+    if (a == 0 && b == 0 && c == 0)
     {  
         // Infinite number of solutions
         printf("%.0fx^2+%.0fx+%.0f = 0 has an \033[1minfinite number of solutions\033[0m\n", a, b, c);
@@ -49,13 +41,20 @@ int main()
 
         return 0;
     }
+    else if(a == 0 && b == 0 && c != 0 || discriminant < 0)
+    {
+        // No solution
+        printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mno solution\033[0m\n", a, b, c);
+        printf("\n");
+        return 0;    
+    }
     else if (discriminant == 0)
     {
         // One real solution
         printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mone solution\033[0m ", a, b, c);
 
-        x1 = (double)-b/2 + sqrt(discriminant);
-        x2 = (double)-b/2 - sqrt(discriminant);
+        x1 = (-b + sqrt(discriminant)) / (2*a);
+        x2 = (-b - sqrt(discriminant)) / (2*a);
 
         if (x1!= 0)
         {
@@ -73,8 +72,8 @@ int main()
     else if (discriminant > 0)
     {
         // Two real solutions
-        x1 = (double)-b/2 + sqrt(discriminant);
-        x2 = (double)-b/2 - sqrt(discriminant);
+        x1 = (-b + sqrt(discriminant)) / (2*a);
+        x2 = (-b - sqrt(discriminant)) / (2*a);
 
         printf("%.0fx^2+%.0fx+%.0f = 0 has \033[1mtwo solutions x1 = %f x2 = %f\033[0m\n", a, b, c, x1, x2);
         printf("\n");
