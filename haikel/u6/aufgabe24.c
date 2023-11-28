@@ -28,22 +28,12 @@ int summeDerErstenNNatuerlichenZahlen(int n)
     }
 void summeDerNatuerlichenZahlenVonMBisN(int m, int n)
 {
-    if(m>n)
+    if(m>n || m<0 || n<0)
     {
-        printf("Die Rechnung liegt nicht im Rahmen der Elemente\n");
+        printf("Fehlermeldung! Ungültige Zahlen!\n");
+        return 0;
     }
-    else if(n <0)
-    {
-        printf("Die Rechnung liegt nicht im Rahmen der Elemente\n");
-    }
-    else if (m<0)
-    {
-        printf("Die Rechnung liegt nicht im Rahmen der Elemente\n");
-    }
-    else
-    {
-        printf("Die Summe der natürlichen Zahlen von m bis n: ((%lf-%lf+1)*(%lf+%lf)) = %lf\n", n,m,((n-m+1)*(m+n))/2);
-    }
+
 
 }
 }
