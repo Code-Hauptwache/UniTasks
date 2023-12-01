@@ -1,0 +1,32 @@
+##Aufgabe 28: Schleifenumformungen II
+###Inhalte und Sprachkonzepte der vorliegenden Aufgabe
+    • Verwandtschaft der do-, while- und for-Schleife
+###Aufgabenstellung
+Setzen Sie das folgende while-Schleifenkonstrukt bedeutungsgleich in ein
+for- und ein do-while-Schleifenkonstrukt um. Gehen Sie davon aus, dass
+<AusdruckA> und <AnweisungB> keine Änderungen an der Variablen i vornehmen.
+
+int i;
+...
+while ( ( i>0 ) && ( <AusdruckA> ) )
+{
+<AnweisungB>;
+i--;
+}
+---
+###For-Schleife
+int i;
+...
+for(; i > 0 && <AusdruckA>; i--) {
+    <AnweisungB>;
+}
+###Do-While-Schleife
+int i;
+...
+if (i > 0 && <AusdruckA>)
+{
+    do {
+        <AnweisungB>;
+        i--;
+    } while (i > 0 && <AusdruckA>)
+}
