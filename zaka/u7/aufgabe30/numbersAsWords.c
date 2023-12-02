@@ -11,7 +11,7 @@ int main()
     int numToWord;
     int scanfReturnValue;
 
-    printf("        \033[1mConvert numbers to words\033[0m\n");
+    printf("        \033[1mConvert numbers to words\033[0m\n\n");
     printf("Please enter a initger between 9,999 and 0 you want to convert: ");
     scanfReturnValue = scanf("%d", &numToWord);
 
