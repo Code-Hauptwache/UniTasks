@@ -9,16 +9,31 @@ int main ()
 
     printf("Geben Sie eine Ganzzahl ein: ");
     scanf("%d", &nummer);
+    
+    if (nummer < 0 || nummer >= 1000) 
+    {
+        printf("ungültig ");
+        return 1;  
+    } 
     int nummer100 = nummer / 100;  
-    int nummer10 = nummer / 10;  
-    int nummer1 = nummer;  
+    int nummer10 = (nummer % 100)/ 10;  
+    int nummer1 = nummer % 10;  
+    if (nummer >= 0 && nummer <= 9)
+    { 
+        nummerAlsWort(nummer1);
+    }
+    else if (nummer >= 10 && nummer <=99)
+    {
+       nummerAlsWort(nummer10),nummerAlsWort(nummer1);
+    }
+   else if(nummer >= 100 && nummer <= 999)
+   {
+    nummerAlsWort(nummer100), nummerAlsWort(nummer10), nummerAlsWort(nummer1);
+   }
+   
 
-    nummerAlsWort(nummer100);
-    nummerAlsWort(nummer10);
-    nummerAlsWort(nummer1);
+    return 0;
     
-    
-
 }
 void nummerAlsWort(int ziffer)
 {
