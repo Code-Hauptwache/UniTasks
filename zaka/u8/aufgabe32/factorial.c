@@ -2,9 +2,7 @@
 
 int main()
 {
-    printf("0! = 1\n");
-
-    for (int i = 1; i < 51; i++)
+    for (int i = 0; i < 51; i++)
     {
         long double factorial = 1;
 
