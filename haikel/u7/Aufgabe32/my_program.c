@@ -9,3 +9,16 @@ void main(void)
     double b = -2.7;
     printf("Der Absolutwert von %lf ist : %lf\n",b , absWertDouble(b));
 }
+{
+    double a;
+    double b;
+
+    scanf("%lf",&a);
+    scanf("%lf",&b);
+
+    printf("%lf+%lf = %lf\n",a,b, (a+b));
+    printf("%lf-%lf = %lf\n",a,b, a-b);
+    printf("%lf+%lf = %lf\n",a,b, a*b);
+    printf("%lf+%lf = %lf\n",a,b, a/b);
+
+}

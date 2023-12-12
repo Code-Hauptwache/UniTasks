@@ -14,3 +14,11 @@ int absWertInt(int v)
      else
          return v;
 }
+void grundrechenarten(double a, double b);
+{
+    return a+b;
+    return a-b;
+    return a*b;
+    return a/b;
+}
+
