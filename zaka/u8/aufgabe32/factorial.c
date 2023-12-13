@@ -3,7 +3,8 @@
 
 int main()
 {
-    for (int i = 0; i < 51; i++)
+    int i = 1;
+    while (i < 51)
     {
         mpz_t trueFactorial;
         mpz_init(trueFactorial);
@@ -11,9 +12,12 @@ int main()
 
         unsigned long long factorial = 1;
 
-        for (int j = 1; j <= i; j++)
+        int j = 1;
+        while (j <= i)
         {
             factorial = factorial * j;
+
+            j++;
         }
 
         printf("%d! = %llu\n", i, factorial);
@@ -22,6 +26,8 @@ int main()
         printf("\n\n");
 
         mpz_clear(trueFactorial);
+
+        i++;
     }
 }
 
