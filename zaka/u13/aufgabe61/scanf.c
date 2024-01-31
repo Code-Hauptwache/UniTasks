@@ -4,14 +4,14 @@ int main()
 {
     unsigned int a;
     unsigned int b;
-    int num;
+    unsigned int c;
 
-    printf("Please enter two positive numbers in this format a/b: ");
-    scanf("%d/%d", &a, &b);
+    printf("Please enter three positive intiger in following form a + b,c: ");
+    scanf("%d + %d,%d", &a, &b, &c);
 
-    num = a/b;
 
-    printf("\n%d+%d/%d\n", num, a - (num * b), b);
+
+    printf("\n%d+%d/%d\n", c, a - (c * b), b);
 
     return 0;
 }
