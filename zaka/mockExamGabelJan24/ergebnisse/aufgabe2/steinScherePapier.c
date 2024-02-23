@@ -1,4 +1,5 @@
 // Zakaria Boujana MN:1512968
+#include "advanced_console_output.h"
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -128,7 +129,12 @@ int spielrunde()
     switch (schlaegt(mensch, cpu))
     {
         case -1:
-            printf("==> *** %s schlaegt %s! ***\nPech, Sie haben verloren!\n", bezeichner[cpu], bezeichner[mensch]);
+            set_text_blinking();
+            printf("==> *** %s schlaegt %s! ***\n", bezeichner[cpu], bezeichner[mensch]);
+            unset_text_blinking();
+            set_fg_color("red");
+            printf("Pech, Sie haben verloren!\n");
+            set_fg_color("default");
             return -1;
             break;
         case 0:
@@ -136,7 +142,12 @@ int spielrunde()
             return 0;
             break;
         case 1:
-            printf("==> *** %s schleagt %s! ***\nGlueckwunsch, Sie haben gewonnen!\n", bezeichner[mensch], bezeichner[cpu]);
+            set_text_blinking();
+            printf("==> *** %s schleagt %s! ***\n", bezeichner[mensch], bezeichner[cpu]);
+            unset_text_blinking();
+            set_fg_color("green");
+            printf("Glueckwunsch, Sie haben gewonnen!\n");
+            set_fg_color("default");
             return 1;
             break;
     }
